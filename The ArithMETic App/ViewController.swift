@@ -24,10 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var TimeLBL: UILabel!
     
    
-    
-//    func timeToLose1Pound(during: String,weight: Double) -> Double{
-//
-        //    }
+  
     
     @IBAction func calculate(_ sender: Any) {
         let activivty = ActivityTF.text!
@@ -35,13 +32,16 @@ class ViewController: UIViewController {
         let time = Int(TimeTF.text!)!
         let energy = ExcerciseCoach.energyConsumed(during: activivty, weight: weight, time: time)
         let hours = ExcerciseCoach.timeToLose1Pound(during: activivty, weight: weight)
-        EnergyLBL.text = String(energy)
-        TimeLBL.text = String(hours)
+        EnergyLBL.text = String(format: "%.1f cal",energy)
+        TimeLBL.text = String(format: "%.1f minutes",hours)
     }
     
     @IBAction func clear(_ sender: Any) {
-        EnergyLBL.text = String("\(0")
-        TimeLBL.text = String(0)
+        EnergyLBL.text = "0 cal"
+        TimeLBL.text = "0 minutes"
+        ActivityTF.text = nil
+        WeightTF.text = nil
+        TimeTF.text = nil
     }
     
 
