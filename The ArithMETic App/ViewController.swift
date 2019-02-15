@@ -26,6 +26,7 @@ class ViewController: UIViewController {
    
   
     
+    
     @IBAction func calculate(_ sender: Any) {
         let activivty = ActivityTF.text!
         let weight = Double(WeightTF.text!)!
