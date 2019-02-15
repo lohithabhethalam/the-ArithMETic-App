@@ -23,10 +23,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var TimeLBL: UILabel!
     
-   
+
     
   
-    
+
     
     @IBAction func calculate(_ sender: Any) {
         let activivty = ActivityTF.text!
